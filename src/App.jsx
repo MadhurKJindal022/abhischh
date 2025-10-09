@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Pages
 import Home from "./pages/Home";
@@ -15,13 +15,15 @@ function App() {
     <Router>
       <Layout>
         <Routes>
-          <Route path="/" element={<Navigate to="/home" replace />} />
+          {/* Open Home directly on "/" */}
+          <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/brands" element={<Brands />} />
           <Route path="/wallclock" element={<WallClockPage />} />
           <Route path="/about" element={<About />} />
-          {/* 404 Page */}
-          <Route path="*" element={<div className="min-h-screen flex items-center justify-center text-white text-4xl">Page Not Found</div>} />
+
+          {/* Instead of 404, redirect all unknown paths to Home */}
+          <Route path="*" element={<Home />} />
         </Routes>
       </Layout>
     </Router>

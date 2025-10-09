@@ -15,7 +15,7 @@ export default function WallClockLifestyle() {
           </div>
           <div className="w-full aspect-square overflow-hidden rounded-lg shadow-2xl">
             <img
-              src="https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?auto=format&fit=crop&w=1000&q=80"
+              src="https://c8.alamy.com/comp/T3W941/old-and-big-clock-hanging-on-a-wooden-wall-T3W941.jpg"
               alt="Luxury wall clock in a modern interior"
               className="w-full h-full object-cover"
             />

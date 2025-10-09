@@ -185,7 +185,7 @@ export default function WallClock() {
             {/* Right side - Image */}
             <div>
               <img
-                src="https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                src="https://c8.alamy.com/comp/T3W941/old-and-big-clock-hanging-on-a-wooden-wall-T3W941.jpg"
                 alt="Luxury wall clock in modern interior living room"
                 className="w-full rounded-lg shadow-2xl"
               />

@@ -1,14 +1,22 @@
-import React from 'react';
+import React from "react";
 
 /**
  * Main Card container
  * - Black background
  * - Rounded corners
- * - Smooth border and hover effect
+ * - Gold borders and hover glow
  */
-export const Card = ({ children, className = '', ...props }) => (
+export const Card = ({ children, className = "", ...props }) => (
   <div
-    className={`bg-black border border-gray-700 hover:border-gold/40 transition-all duration-500 rounded-xl overflow-hidden shadow-sm ${className}`}
+    className={`
+      bg-black 
+      border border-gold/30 
+      hover:shadow-[0_0_25px_rgba(212,175,55,0.5)] 
+      hover:border-gold/50 
+      transition-all duration-500 
+      rounded-xl overflow-hidden
+      ${className}
+    `}
     {...props}
   >
     {children}
@@ -17,40 +25,53 @@ export const Card = ({ children, className = '', ...props }) => (
 
 /**
  * Card content container
- * - Padding can be customized via className
+ * - Default padding
+ * - Can be overridden via className
  */
-export const CardContent = ({ children, className = 'p-6', ...props }) => (
-  <div className={`${className}`} {...props}>
+export const CardContent = ({ children, className = "p-6", ...props }) => (
+  <div className={`${className} text-gray-200`} {...props}>
     {children}
   </div>
 );
 
 /**
  * Card header section
- * - Usually for titles or top info
+ * - Bottom gold border
+ * - Padding for spacing
  */
-export const CardHeader = ({ children, className = '', ...props }) => (
-  <div className={`p-4 border-b border-gold/20 ${className}`} {...props}>
+export const CardHeader = ({ children, className = "", ...props }) => (
+  <div
+    className={`p-4 border-b border-gold/40 ${className}`}
+    {...props}
+  >
     {children}
   </div>
 );
 
 /**
  * Card title
- * - Styled heading for card
+ * - Luxury styled heading
+ * - Gold accent text for highlights
  */
-export const CardTitle = ({ children, className = '', ...props }) => (
-  <h3 className={`luxury-text text-xl lg:text-2xl font-bold text-white ${className}`} {...props}>
+export const CardTitle = ({ children, className = "", ...props }) => (
+  <h3
+    className={`luxury-text text-xl lg:text-2xl font-bold text-gold ${className}`}
+    {...props}
+  >
     {children}
   </h3>
 );
 
 /**
  * Optional Card footer
- * - Can be used for actions like buttons
+ * - Top gold border
+ * - Ideal for buttons or links
  */
-export const CardFooter = ({ children, className = '', ...props }) => (
-  <div className={`p-4 border-t border-gold/20 ${className}`} {...props}>
+export const CardFooter = ({ children, className = "", ...props }) => (
+  <div
+    className={`p-4 border-t border-gold/40 ${className}`}
+    {...props}
+  >
     {children}
   </div>
 );
